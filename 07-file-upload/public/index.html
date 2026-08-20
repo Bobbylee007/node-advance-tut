@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+</head>
+
+<body>
+    <main>
+        <form action="" class="form file-form">
+            <h4>FIle Upload</h4>
+            <div class="form-row">
+                <label for="">Name</label>
+                <input type="text" class="form-input" name="name" value="Food">
+            </div>
+
+             <div class="form-row">
+                <label for="">price</label>
+                <input type="text" class="form-input" name="price" value="10.99">
+             </div>
+             <div class="form-row">
+                <label for="">Image</label>
+                <input type="file" id="image" name="image" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-block">Add food</button>
+        </form>
+
+        <section class="container">
+
+        </section>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"
+            integrity="sha512-FPlUpimug7gt7Hn7swE8N2pHw/+oQMq/+R/hH/2hZ43VOQ+Kjh25rQzuLyPz7aUWKlRpI7wXbY6+U3oFPGjPOA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./browser-app.js"></script>
+    </main>
+</body>
+
+</html>

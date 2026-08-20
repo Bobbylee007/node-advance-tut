@@ -4,7 +4,7 @@ require("express-async-errors");
 
 const express = require("express");
 const app = express();
-
+const fileUpload = require("express-fileupload");
 // database
 const connectDB = require("./db/connect");
 
@@ -20,11 +20,14 @@ const errorHandlerMiddleware = require("./middleware/error-handler");
 
 
 
-//  ---------implementation------
+//  ---------implementation-----------
+
+app.use(express.static("./public")); // serve static files from the public folder
 app.use(express.json())
+app.use(fileUpload())
 //home route
 app.get("/", (req, res) => {
-  res.send('<h1>File Upload</h1><a href="/api/v1/upload">Upload</a>');
+  res.send('<h1>File Uploads</h1><a href="/api/v1/uploads">Uploads</a>');
 });
 
 
