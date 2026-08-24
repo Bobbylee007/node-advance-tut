@@ -5,30 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Upload</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <main>
-        <form action="" class="form file-form">
+    <main class="container mb-lg">
+        <sectinon class="content grid-content-center  mb-lg">
+            <form action="" class="form file-form pI-md pb-md">
             <h4>FIle Upload</h4>
-            <div class="form-row">
-                <label for="">Name</label>
-                <input type="text" class="form-input" name="name" value="Food">
+            <div class="form-row mb-md">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-input" name="name" value="Food">
             </div>
 
-             <div class="form-row">
-                <label for="">price</label>
-                <input type="text" class="form-input" name="price" value="10.99">
+             <div class="form-row mb-md">
+                <label for="price">price</label>
+                <input type="text" id="price" class="form-input" name="price" value="10.99">
              </div>
-             <div class="form-row">
-                <label for="">Image</label>
-                <input type="file" id="image" name="image" accept="image/*">
+             <div class="form-row mb-md">
+                <label for="image">Image</label>
+                <input type="file" id="image" class="" name="image" accept="image/*">
             </div>
-            <button type="submit" class="btn btn-block">Add food</button>
+            <button type="submit" class="btn btn-primary mb-md">Add food</button>
         </form>
+        </sectinon>
+        
 
-        <section class="container">
-
+        <section class="content grid-content-center  mb-lg">
+            <div class="cards">
+                cards in here
+            </div>
         </section>
 
         

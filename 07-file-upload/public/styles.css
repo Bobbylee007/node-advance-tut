@@ -184,17 +184,6 @@ body {
     font-size: var(--txt-base);
 }
 
-/* 
-.main-wrapper {
-    width: 100%;
-    width: var(--max-width);
-    position: relative;
-    display: grid;
-    place-items: center;
-    margin: 0 auto;
-    position: relative;
-} */
-
 
 /*Typography*/
 h1,
@@ -349,52 +338,52 @@ img {
 }
 
 /*spacing*/
-.space-mb-sm {
+.mb-sm {
     margin-block: var(--spc-sm);
 }
 
-.space-mb-md {
+.mb-md {
     margin-block: var(--spc-rg);
 }
 
-.space-mb-lg {
+.mb-lg {
     margin-block: var(--spc-lg);
 }
 
-.space-mI-sm {
+.mI-sm {
     margin-inline: var(--spc-sm);
 }
 
-.space-mI-md {
+.mI-md {
     margin-inline: var(--spc-rg);
 }
 
-.space-mI-lg {
+.mI-lg {
     margin-inline: var(--spc-lg);
 }
 
 
-.space-pI-sm {
+.pI-sm {
     padding-inline: var(--spc-sm);
 }
 
-.space-pI-md {
+.pI-md {
     padding-inline: var(--spc-rg);
 }
 
-.space-pI-lg {
+.pI-lg {
     padding-inline: var(--spc-lg);
 }
 
-.space-pb-sm {
+.pb-sm {
     padding-block: var(--spc-sm);
 }
 
-.space-pb-md {
+.pb-md {
     padding-block: var(--spc-rg);
 }
 
-.space-pb-lg {
+.pb-lg {
     padding-block: var(--spc-lg);
 }
 
@@ -466,7 +455,7 @@ img {
     &:hover {
         width: 100%;
         background: var(--clr-brand);
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 }
 
@@ -483,7 +472,7 @@ img {
     &:hover {
         width: 100%;
         background: transparent;
-        transform: scale(1.1);
+        transform: scale(1.05);
         border: 1.5px solid var(--clr-brand);
     }
 }
@@ -496,7 +485,7 @@ img {
     &:hover {
         width: 100%;
         background: transparent;
-        transform: scale(1.1);
+        transform: scale(1.05);
         border: 1.5px solid var(--clr-brand);
     }
 }
@@ -1135,10 +1124,7 @@ img {
 }
 
 /* Form */
-.contact-field {
-    width: 100%;
-    max-width: 450px;
-}
+
 
 .icon-container {
     height: 56px;
@@ -1148,12 +1134,16 @@ img {
 
 }
 
-.formField {
+.form {
     width: 100%;
     max-width: 400px;
+    display: grid;
+    place-items: center;
+    background-color: var(--clr-background);
+    box-shadow: 0px 0px 4px var(--clr-text-light);
 }
 
-.formControl {
+.form-row{
     position: relative;
     width: 100%;
     max-width: 350px;
@@ -1161,7 +1151,6 @@ img {
     display: grid;
     grid-auto-rows: auto;
     gap: 8px;
-    border-bottom: 2px solid var(--clr-brand);
     padding: 8px;
     margin-block-end: var(--spc-lg);
 }
@@ -1170,81 +1159,20 @@ img {
     position: absolute;
     top: 0px;
     padding-inline: var(--spc-rg);
+    font-size: var(--txt-body2);
 }
 
-.inputField {
-    position: absolute;
-    background-color: transparent;
+.form-input {
+   
+    background-color: var(--clr-container-weak);
     width: 100%;
     height: 32px;
     color: var(--clr-text-light);
-    gap: 4px;
-    font-size: medium;
-    border: 0, 0, 2px, 0;
-    outline: none;
+    font-size: var(--txt-base);
     border-style: none;
     padding-left: var(--spc-sm);
 }
 
-.inputField:active {
-    position: absolute;
-    background-color: var(--clr-container-weak);
-    border-color: var(--clr-container-weak);
-}
-
-
-.inputField:focus {
-    border-color: var(--clr-container-weak);
-    background-color: var(--clr-container-weak);
-    position: absolute;
-}
-
-.inputField:focus+.text-label,
-.inputField:not(:placeholder-shown)+.label {
-    opacity: 0;
-}
-
-.inputField:focus label {
-    display: none;
-    opacity: 0;
-}
-
-.textField {
-    width: 100%;
-    height: 116px;
-    resize: vertical;
-    position: absolute;
-    background-color: transparent;
-    border: 2px solid var(--clr-brand);
-    font-size: var(--txt-h5-sm);
-    color: var(--clr-text-light);
-    outline: none;
-    padding: 16px;
-    border: none;
-
-    &:active {
-        position: absolute;
-        background-color: var(--clr-container-weak);
-        padding: 16px;
-        border-style: none;
-    }
-
-    &:focus {
-        width: 100%;
-        position: absolute;
-        background-color: var(--clr-container-weak);
-        padding: 16px;
-        border-style: none;
-        outline: none;
-    }
-}
-
-.formControl:has(textarea) {
-    width: 100%;
-    height: 115px;
-    border: 2px solid var(--clr-brand);
-    outline: none;
-}
 
 .submitField {
     width: 100%;
@@ -1254,9 +1182,6 @@ img {
     align-items: center;
 }
 
-.form-btn {
-    border-style: none;
-}
 
 /* Alerts */
 .warningAlert {
